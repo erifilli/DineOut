@@ -1,0 +1,29 @@
+{
+  "name": "dineout",
+  "version": "1.0.0",
+  "description": "Restaurant reservation system with web, mobile, and server components",
+  "private": true,
+  "scripts": {
+    "start:web": "cd web && npm start",
+    "start:server": "cd server && npm run dev",
+    "start:mobile": "cd mobile && npm start",
+    "install:all": "npm install && cd web && npm install && cd ../server && npm install && cd ../mobile && npm install",
+    "dev": "concurrently \"npm run start:server\" \"npm run start:web\""
+  },
+  "workspaces": [
+    "web",
+    "server",
+    "mobile"
+  ],
+  "keywords": [
+    "restaurant",
+    "reservation",
+    "react",
+    "react-native",
+    "express",
+    "mariadb"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
